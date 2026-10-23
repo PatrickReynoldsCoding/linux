@@ -48,6 +48,16 @@ wget -qO /tmp/steam.deb https://cdn.akamai.steamstatic.com/client/installer/stea
 # After first launch: Steam > Settings > Compatibility > enable Steam Play for all titles.
 
 # ---------------------------------------------------------------------------
+# Android apps - Waydroid (runs Android with the Google Play Store)
+# ---------------------------------------------------------------------------
+echo "== Waydroid (Android apps) =="
+curl -fsSL https://repo.waydro.id | sudo bash || echo "   Waydroid repo not available for this release - trying Ubuntu's own package"
+apt_i waydroid
+{ sudo systemctl enable --now waydroid-container \
+  && { [ -f /var/lib/waydroid/waydroid.cfg ] || sudo waydroid init -s GAPPS; }; } || FAILED+=("Waydroid setup")
+# Pocket Casts and Etherpad are installed from the Play Store - see "Next steps" at the end.
+
+# ---------------------------------------------------------------------------
 # Creative
 # ---------------------------------------------------------------------------
 echo "== Creative =="
@@ -104,3 +114,19 @@ else
   echo "Done, but these failed (re-run the script or install them by hand):"
   printf '  - %s\n' "${FAILED[@]}"
 fi
+
+cat <<'EOF'
+
+== Next steps: Android apps (one-time, needs your Google login) ==
+  1. Open "Waydroid" from the app menu once so Android boots, then in a terminal run:
+       sudo waydroid shell
+     and inside that shell paste:
+       ANDROID_RUNTIME_ROOT=/apex/com.android.runtime ANDROID_DATA=/data ANDROID_TZDATA_ROOT=/apex/com.android.tzdata ANDROID_I18N_ROOT=/apex/com.android.i18n sqlite3 /data/data/com.google.android.gsf/databases/gservices.db "select * from main where name = \"android_id\";"
+     It prints android_id|<number>. Copy the number, then type exit.
+  2. Go to https://www.google.com/android/uncertified, sign in, paste that number, Register.
+  3. Wait ~10 minutes, restart Waydroid (waydroid session stop), open Play Store and sign in.
+  4. Install from the Play Store:
+       - Pocket Casts  https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts
+       - Etherpad      https://play.google.com/store/apps/details?id=com.humblebee.etherpad
+     They then show up in the normal Ubuntu app menu.
+EOF
