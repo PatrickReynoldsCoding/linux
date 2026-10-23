@@ -53,6 +53,7 @@ wget -qO /tmp/steam.deb https://cdn.akamai.steamstatic.com/client/installer/stea
 echo "== Creative =="
 # Optional - uncomment if wanted:
 flatpak_i com.bitwig.BitwigStudio      # closest Linux DAW to Ableton (paid)
+flatpak_i org.godotengine.Godot        # Godot 4 game engine (GDScript)
 # ---------------------------------------------------------------------------
 # Development
 # ---------------------------------------------------------------------------
