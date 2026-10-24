@@ -1,0 +1,124 @@
+[org/gnome/desktop/app-folders]
+folder-children=['System', 'Utilities', 'YaST', 'Pardus']
+
+[org/gnome/desktop/app-folders/folders/Pardus]
+categories=['X-Pardus-Apps']
+name='X-Pardus-Apps.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/System]
+apps=['nm-connection-editor.desktop', 'org.gnome.baobab.desktop', 'org.gnome.DiskUtility.desktop', 'im-config.desktop', 'org.gnome.Logs.desktop', 'org.gnome.Sysprof.desktop']
+name='X-GNOME-Shell-System.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/Utilities]
+apps=['org.gnome.Papers.desktop', 'org.gnome.font-viewer.desktop', 'org.gnome.Loupe.desktop', 'org.gnome.seahorse.Application.desktop']
+name='X-GNOME-Shell-Utilities.directory'
+translate=true
+
+[org/gnome/desktop/app-folders/folders/YaST]
+categories=['X-SuSE-YaST']
+name='suse-yast.directory'
+translate=true
+
+[org/gnome/desktop/input-sources]
+sources=[('xkb', 'gb')]
+
+[org/gnome/desktop/interface]
+accent-color='blue'
+color-scheme='prefer-dark'
+gtk-theme='WhiteSur-Dark'
+icon-theme='WhiteSur-dark'
+
+[org/gnome/desktop/notifications]
+application-children=['update-manager', 'gnome-initial-setup', 'google-chrome', 'org-gnome-nautilus', 'org-gnome-software', 'gnome-power-panel', 'steam', 'com-discordapp-discord', 'com-spotify-client']
+
+[org/gnome/desktop/notifications/application/com-discordapp-discord]
+application-id='com.discordapp.Discord.desktop'
+
+[org/gnome/desktop/notifications/application/com-spotify-client]
+application-id='com.spotify.Client.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-initial-setup]
+application-id='gnome-initial-setup.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-power-panel]
+application-id='gnome-power-panel.desktop'
+
+[org/gnome/desktop/notifications/application/google-chrome]
+application-id='google-chrome.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-software]
+application-id='org.gnome.Software.desktop'
+
+[org/gnome/desktop/notifications/application/steam]
+application-id='steam.desktop'
+
+[org/gnome/desktop/notifications/application/update-manager]
+application-id='update-manager.desktop'
+
+[org/gnome/desktop/privacy]
+report-technical-problems=false
+
+[org/gnome/mutter]
+edge-tiling=false
+
+[org/gnome/mutter/keybindings]
+toggle-tiled-left=@as []
+toggle-tiled-right=@as []
+
+[org/gnome/nautilus/preferences]
+migrated-gtk-settings=true
+
+[org/gnome/settings-daemon/plugins/color]
+night-light-enabled=true
+night-light-schedule-automatic=false
+
+[org/gnome/settings-daemon/plugins/power]
+sleep-inactive-ac-timeout=3600
+sleep-inactive-ac-type='nothing'
+
+[org/gnome/shell]
+app-picker-layout=[{'org.gnome.Calculator.desktop': <{'position': <0>}>, 'firmware-updater_firmware-updater.desktop': <{'position': <1>}>, 'gnome-language-selector.desktop': <{'position': <2>}>, 'org.gnome.clocks.desktop': <{'position': <3>}>, 'net.nokyan.Resources.desktop': <{'position': <4>}>, 'desktop-security-center_desktop-security-center.desktop': <{'position': <5>}>, 'update-manager.desktop': <{'position': <6>}>, 'org.gnome.Settings.desktop': <{'position': <7>}>, 'org.gnome.Ptyxis.desktop': <{'position': <8>}>, 'org.gnome.TextEditor.desktop': <{'position': <9>}>, 'org.gnome.Characters.desktop': <{'position': <10>}>, 'org.qbittorrent.qBittorrent.desktop': <{'position': <11>}>, 'Utilities': <{'position': <12>}>, 'System': <{'position': <13>}>, 'org.gnome.Software.desktop': <{'position': <14>}>, 'solaar.desktop': <{'position': <15>}>, 'vlc.desktop': <{'position': <16>}>, 'steam.desktop': <{'position': <17>}>, 'debian-uxterm.desktop': <{'position': <18>}>, 'Waydroid.desktop': <{'position': <19>}>, 'debian-xterm.desktop': <{'position': <20>}>, 'code_code.desktop': <{'position': <21>}>, 'intellij-idea-community_intellij-idea-community.desktop': <{'position': <22>}>, 'postman_postman.desktop': <{'position': <23>}>, 'org.gnome.Extensions.desktop': <{'position': <24>}>, 'org.gnome.tweaks.desktop': <{'position': <25>}>, 'com.mattjakeman.ExtensionManager.desktop': <{'position': <26>}>, 'Rocket League.desktop': <{'position': <27>}>, 'com.bitwig.BitwigStudio.desktop': <{'position': <28>}>, 'com.discordapp.Discord.desktop': <{'position': <29>}>, 'org.gnome.GTK4ThemeSwitcher.desktop': <{'position': <30>}>, 'org.godotengine.Godot.desktop': <{'position': <31>}>, 'dev.diegovsky.Riff.desktop': <{'position': <32>}>, 'com.github.KRTirtho.Spotube.desktop': <{'position': <33>}>, 'com.stremio.Stremio.desktop': <{'position': <34>}>, 'us.zoom.Zoom.desktop': <{'position': <35>}>}]
+enabled-extensions=['ding@rastersoft.com', 'ubuntu-dock@ubuntu.com', 'tiling-assistant@ubuntu.com', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'fullscreen-notifications@sorrow.about.alice.pm.me', 'peek-top-bar-on-fullscreen@marcinjahn.com']
+favorite-apps=['firefox_firefox.desktop', 'org.gnome.Nautilus.desktop', 'snap-store_snap-store.desktop', 'google-chrome.desktop', 'com.spotify.Client.desktop', 'org.gnome.Yelp.desktop']
+last-selected-power-profile='performance'
+welcome-dialog-last-shown-version='50.1'
+
+[org/gnome/shell/extensions/dash-to-dock]
+apply-custom-theme=false
+autohide=true
+click-action='minimize-or-previews'
+custom-theme-shrink=true
+dash-max-icon-size=48
+dock-fixed=false
+dock-position='BOTTOM'
+extend-height=false
+intellihide=true
+running-indicator-style='DOTS'
+show-apps-at-top=true
+show-mounts=false
+
+[org/gnome/shell/extensions/ding]
+check-x11wayland=true
+
+[org/gnome/shell/extensions/tiling-assistant]
+focus-hint-color='rgb(203,67,20)'
+last-version-installed=54
+overridden-settings={'org.gnome.mutter.edge-tiling': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-left': <@mb nothing>, 'org.gnome.mutter.keybindings.toggle-tiled-right': <@mb nothing>}
+
+[org/gnome/shell/extensions/user-theme]
+name='WhiteSur-Dark'
+
+[org/gnome/shell/world-clocks]
+locations=@av []
+
+[org/gnome/system/location]
+enabled=false
+
+[org/gtk/gtk4/settings/file-chooser]
+show-hidden=false
+sort-directories-first=true

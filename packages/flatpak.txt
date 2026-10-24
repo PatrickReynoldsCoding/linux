@@ -1,0 +1,8 @@
+com.bitwig.BitwigStudio
+com.discordapp.Discord
+com.github.KRTirtho.Spotube
+com.spotify.Client
+com.stremio.Stremio
+dev.diegovsky.Riff
+org.godotengine.Godot
+us.zoom.Zoom

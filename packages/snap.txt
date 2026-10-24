@@ -1,0 +1,19 @@
+bare 
+code --classic
+core18 
+core20 
+core22 
+core24 
+desktop-security-center 
+firefox 
+firmware-updater 
+gnome-46-2404 
+gtk-common-themes 
+hwctl 
+intellij-idea-community --classic
+mesa-2404 
+postman 
+prompting-client 
+snap-store 
+snapd 
+snapd-desktop-integration 

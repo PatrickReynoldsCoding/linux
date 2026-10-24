@@ -1,0 +1,33 @@
+{
+  "model": "opus",
+  "permissions": {
+    "allow": [
+      "Bash(gnome-extensions *)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/.claude/hooks/notify-claude-ready.sh",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "patrick-reynolds-skills@patrick-reynolds-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "patrick-reynolds-skills": {
+      "source": {
+        "source": "github",
+        "repo": "PatrickReynoldsCoding/patrick-reynolds-skills"
+      }
+    }
+  },
+  "theme": "auto"
+}
