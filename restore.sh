@@ -91,6 +91,18 @@ done
 echo "== GNOME settings =="
 dconf load / < config/gnome.dconf || FAILED+=("GNOME settings (dconf load)")
 
+# ---------------------------------------------------------------------------
+# 6. System files (udev rules). Each rule only applies on the hardware it names.
+# ---------------------------------------------------------------------------
+echo "== System files =="
+# Lid close wakes the Lenovo Yoga 7 (82QF) from suspend; with lid action "ignore" the fan then runs.
+if [ "$(cat /sys/class/dmi/id/product_name 2>/dev/null)" = "82QF" ] && [ -e /sys/devices/platform/PNP0C0D:00 ]; then
+  sudo install -m 644 config/system/90-lid-no-wakeup.rules /etc/udev/rules.d/90-lid-no-wakeup.rules \
+    && sudo udevadm control --reload \
+    && sudo udevadm trigger --subsystem-match=platform --sysname-match='PNP0C0D:00' \
+    || FAILED+=("udev rule: 90-lid-no-wakeup")
+fi
+
 echo
 if [ ${#FAILED[@]} -eq 0 ]; then
   echo "All done."

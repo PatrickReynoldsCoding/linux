@@ -48,6 +48,10 @@ for f in "${DOTFILES[@]}"; do
   fi
 done
 
+echo "== System files =="
+mkdir -p config/system
+[ -f /etc/udev/rules.d/90-lid-no-wakeup.rules ] && cp /etc/udev/rules.d/90-lid-no-wakeup.rules config/system/ || true
+
 echo "== Checking for secrets =="
 if grep -rniE '(password|passwd|secret|token|api[_-]?key|BEGIN [A-Z ]*PRIVATE KEY)[[:space:]]*[=:]' home config; then
   echo "!! The lines above look like secrets. Remove them before committing - this repo is public."

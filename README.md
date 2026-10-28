@@ -37,6 +37,7 @@ git add -A && git commit -m "Update backup" && git push
 | `config/gnome-extensions.txt` | Extensions installed from extensions.gnome.org |
 | `packages/` | Everything installed with apt, snap and flatpak |
 | `home/` | Dotfiles, copied into `~` on restore |
+| `config/system/` | Files for `/etc`. Now a udev rule that stops the lid waking the Yoga 7 from suspend (only installed on that model) |
 
 **This repo is public.** Never add SSH keys, `~/.config/gh` or anything with passwords or tokens.
 `backup.sh` stops if it finds anything that looks like a secret.

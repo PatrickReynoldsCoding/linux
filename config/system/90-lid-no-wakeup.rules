@@ -1,0 +1,2 @@
+# Stop the lid switch waking the laptop from s2idle suspend (lid action is "ignore", so it would stay awake with the fan running)
+SUBSYSTEM=="platform", KERNEL=="PNP0C0D:00", ATTR{power/wakeup}="disabled"
